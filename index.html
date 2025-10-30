@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h2>Student Registration</h2>
+      <form id="registrationForm">
+        <div class="form-group">
+          <label for="name" class="required">Full Name</label>
+          <input type="text" id="name" placeholder="Enter your full name">
+          <div class="error-message" id="nameError">Please enter a valid name (letters and spaces only)</div>
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="required">Email Address</label>
+          <input type="email" id="email" placeholder="Enter your email">
+          <div class="error-message" id="emailError">Please enter a valid email address</div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone" class="required">Phone Number</label>
+            <input type="tel" id="phone" placeholder="Enter your phone">
+            <div class="error-message" id="phoneError">Please enter a valid 10-digit phone number</div>
+          </div>
+
+          <div class="form-group">
+            <label for="dob" class="required">Date of Birth</label>
+            <input type="date" id="dob">
+            <div class="error-message" id="dobError">You must be at least 16 years old</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="department" class="required">Department</label>
+          <select id="department">
+            <option value="">Select your department</option>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Engineering">Engineering</option>
+            <option value="Business">Business</option>
+            <option value="Arts">Arts</option>
+            <option value="Science">Science</option>
+            <option value="Medicine">Medicine</option>
+          </select>
+          <div class="error-message" id="departmentError">Please select a department</div>
+        </div>
+
+        <div class="form-group">
+          <label for="password" class="required">Password</label>
+          <input type="password" id="password" placeholder="Create a password">
+          <span class="password-toggle" id="passwordToggle">👁️</span>
+          <div class="strength-meter" id="passwordStrength"></div>
+          <div class="error-message" id="passwordError">Password must be at least 8 characters with uppercase, lowercase, number, and special character</div>
+        </div>
+
+        <div class="form-group">
+          <label for="confirmPassword" class="required">Confirm Password</label>
+          <input type="password" id="confirmPassword" placeholder="Confirm your password">
+          <div class="error-message" id="confirmPasswordError">Passwords do not match</div>
+        </div>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="terms">
+          <label for="terms">I agree to the <a href="#">Terms and Conditions</a></label>
+        </div>
+        <div class="error-message" id="termsError">You must agree to the terms and conditions</div>
+
+        <button type="submit">Register</button>
+        <p id="message"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
